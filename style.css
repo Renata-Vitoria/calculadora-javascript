@@ -1,0 +1,206 @@
+
+/* Configurações gerais */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Variáveis de cores */
+:root {
+    --bg-color: #212529;
+    --border-color: #666;
+    --font-color: #f1f5f9;
+    --primary-color: #4dff91;
+    --error-color: #ff0043;
+}
+
+/* Estrutura da página */
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    font-family: "Ubuntu", sans-serif;
+    padding: 1rem;
+}
+
+/* Área principal */
+main {
+    width: 100%;
+    max-width: 40rem;
+    padding: 1.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    background-color: var(--bg-color);
+}
+
+/* Cabeçalho */
+header {
+    padding: 1rem 0 2rem;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+/* Botão de alternar tema */
+#themeSwitcher {
+    background-color: transparent;
+    border: 2px solid var(--font-color);
+    color: var(--font-color);
+}
+
+#themeSwitcher:hover {
+    background-color: var(--font-color);
+    color: var(--bg-color);
+}
+
+/* Botões gerais */
+button {
+    border: none;
+    border-radius: 0.5rem;
+    background-color: var(--primary-color);
+    color: #212529;
+    font-family: inherit;
+    font-weight: 700;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+button:hover {
+    filter: brightness(0.85);
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Campos de entrada */
+input {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    padding: 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: 0.5rem;
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    font-family: inherit;
+    font-size: 1.5rem;
+    text-align: right;
+    outline: none;
+}
+
+input:focus {
+    border-color: var(--primary-color);
+}
+
+/* Campo da expressão */
+#input {
+    margin-bottom: 1.5rem;
+}
+
+/* Teclado da calculadora */
+#keys {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+/* Botões numéricos e operadores */
+#keys button {
+    min-height: 4rem;
+    font-size: 1.5rem;
+}
+
+/* Área do resultado */
+section {
+    gap: 0;
+}
+
+#result {
+    border-radius: 0 0.5rem 0.5rem 0;
+    border-left: none;
+}
+
+/* Botão copiar */
+#copyToClipboard {
+    display: block;
+    width: 6rem;
+    min-height: 4.25rem;
+    border: 2px solid var(--border-color);
+    border-radius: 0.5rem 0 0 0.5rem;
+    background-color: transparent;
+    color: var(--font-color);
+}
+
+/* Estados de erro e sucesso */
+.error {
+    border-color: var(--error-color);
+    background-color: var(--error-color);
+    color: white;
+}
+
+.success {
+    border-color: var(--primary-color) !important;
+    color: var(--primary-color) !important;
+}
+
+/* Classes auxiliares */
+.flex {
+    display: flex;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+/* Acessibilidade: foco pelo teclado */
+button:focus-visible {
+    outline: 3px solid var(--font-color);
+    outline-offset: 3px;
+}
+
+/* Responsividade para celulares */
+@media (max-width: 480px) {
+    main {
+        padding: 1rem;
+    }
+
+    header {
+        gap: 0.5rem;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    #themeSwitcher {
+        font-size: 0.8rem;
+        padding: 0.5rem;
+    }
+
+    #keys {
+        gap: 0.5rem;
+    }
+
+    #keys button {
+        min-height: 3.5rem;
+        font-size: 1.2rem;
+        padding: 0.5rem;
+    }
+
+    input {
+        font-size: 1.2rem;
+    }
+}

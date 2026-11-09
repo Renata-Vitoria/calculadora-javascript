@@ -1,0 +1,10 @@
+
+# Versões antigas dos arquivos
+2-*
+
+# Arquivos temporários do Windows
+Thumbs.db
+Desktop.ini
+
+# Arquivos temporários do macOS
+.DS_Store
