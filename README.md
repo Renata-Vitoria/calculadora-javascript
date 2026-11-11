@@ -1,4 +1,9 @@
 # Calc.js — Calculadora
+## Demonstração
+
+![Calculadora JavaScript](assets/calculadora-preview.png)
+
+🔗 [Acessar calculadora online](https://renata-vitoria.github.io/calculadora-javascript/)
 
 Uma calculadora desenvolvida com **HTML5, CSS3 e JavaScript**, como parte dos meus estudos em desenvolvimento web.
 
